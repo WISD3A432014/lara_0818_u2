@@ -11,10 +11,8 @@
 |
 */
 
-Route::get('home',function(){
-    returnview('home.index');
-});
-Route::get('hello/{name?}',['as'=>'hello.index','uses'=>
-    'HelloController@index']);
+
+Route::get('home','HomeController@index');
+Route::get('hello/{name?}', ['as' => 'hello.index', 'uses' => 'HelloController@index']);
 
 
